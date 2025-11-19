@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "orbital-cli-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server component for Orbital CLI - An AI-powered command line interface with device flow authentication",
   "main": "src/index.js",
   "bin": {
     "orbital": "./src/cli/main.js"
@@ -12,9 +12,17 @@
     "cli": "node src/cli/main.js",
     "orbit": "node src/cli/main.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "ai",
+    "authentication",
+    "oauth",
+    "device-flow",
+    "gemini",
+    "google-ai"
+  ],
+  "author": "Orbital CLI Team",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@ai-sdk/google": "^2.0.38",

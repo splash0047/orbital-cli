@@ -1,6 +1,7 @@
 {
-  "name": "client",
+  "name": "orbital-cli-client",
   "version": "0.1.0",
+  "description": "Web client for Orbital CLI - Device flow authentication interface",
   "private": true,
   "scripts": {
     "dev": "next dev",
