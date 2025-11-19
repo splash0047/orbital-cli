@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+.next/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS generated files
+Thumbs.db
+
+# Screenshots (if added)
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+
+# Prisma
+prisma/generated/
+prisma/migrations/**/*.sql
+!prisma/migrations/**/README.md
