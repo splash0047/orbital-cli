@@ -149,19 +149,19 @@ orbit wakeup
 ## 🖼️ Screenshots
 
 ### 1. CLI Login Process
-
+![CLI Login](screenshots/cli-login.png)
 
 ### 2. Device Authorization Web Interface
-
+![Device Auth](screenshots/device-auth.png)
 
 ### 3. Device Approval Screen
-
+![Device Approval](screenshots/device-approval.png)
 
 ### 4. CLI Chat Interface
-
+![CLI Chat](screenshots/cli-chat.png)
 
 ### 5. Web Dashboard
-
+![Web Dashboard](screenshots/web-dashboard.png)
 
 ## 🛠️ Development
 
@@ -223,3 +223,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Google AI](https://ai.google.dev/) for Gemini models
 
 - [Commander.js](https://github.com/tj/commander.js/) for CLI framework
+
