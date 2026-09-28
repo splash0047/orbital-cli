@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Orbital CLI architecture",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/splash0047/orbital-cli",
+      "provider": "github",
+      "revision": "5c50c61722b3cde6e2ba849cee584037037b76ea"
+    }
+  },
+  "components": [
+    {
+      "id": "terminal",
+      "type": "frontend",
+      "label": "Orbit CLI",
+      "pos": [
+        65,
+        300
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "server/src/cli/main.js"
+        }
+      ],
+      "sublabel": "login / chat"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Express + Better Auth",
+      "pos": [
+        360,
+        300
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "server/src/index.js"
+        }
+      ],
+      "sublabel": "device authorization"
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "PostgreSQL via Prisma",
+      "pos": [
+        680,
+        300
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "server/prisma/schema.prisma"
+        }
+      ],
+      "sublabel": "users + conversations"
+    },
+    {
+      "id": "web",
+      "type": "frontend",
+      "label": "Next.js approval UI",
+      "pos": [
+        360,
+        100
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "client/app/approve/page.tsx"
+        }
+      ],
+      "sublabel": "authorize device"
+    },
+    {
+      "id": "gemini",
+      "type": "external",
+      "label": "Google Gemini",
+      "pos": [
+        680,
+        510
+      ],
+      "size": [
+        160,
+        70
+      ],
+      "sources": [
+        {
+          "path": "server/src/cli/ai/google-service.js"
+        }
+      ],
+      "sublabel": "streamed chat + tools"
+    }
+  ],
+  "connections": [
+    {
+      "from": "terminal",
+      "to": "server",
+      "label": "device flow / session"
+    },
+    {
+      "from": "server",
+      "to": "db",
+      "label": "Prisma"
+    },
+    {
+      "from": "web",
+      "to": "server",
+      "label": "approve code",
+      "labelDy": 24
+    },
+    {
+      "from": "terminal",
+      "to": "gemini",
+      "label": "AI SDK stream",
+      "labelDy": 30
+    },
+    {
+      "from": "terminal",
+      "to": "db",
+      "label": "conversation store",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "via": [
+        [
+          145,
+          440
+        ],
+        [
+          760,
+          440
+        ]
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Runtime path",
+      "items": [
+        "The web app approves a device code through Better Auth"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Implementation note",
+      "items": [
+        "CLI chat streams Gemini responses and persists conversations"
+      ]
+    }
+  ]
+}

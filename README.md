@@ -2,6 +2,14 @@
 
 Orbital CLI is a cutting-edge command-line interface that combines secure device-flow authentication with powerful AI capabilities. Built with modern technologies, it offers a seamless experience for interacting with AI models directly from your terminal.
 
+## Architecture
+
+![Current system architecture](docs/architecture/architecture.svg)
+
+[Explore the interactive Archify diagram](docs/architecture/architecture.html) · [View the source specification](docs/architecture/architecture.json)
+
+This diagram maps the components present in the repository. Optional integrations and implementation limits are called out in the diagram.
+
 ## 🌟 Features
 
 - 🔐 **Secure Device Flow Authentication**: OAuth-based authentication using device codes
